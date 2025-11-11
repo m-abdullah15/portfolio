@@ -56,23 +56,46 @@ export default function About({ isDarkMode }) {
                 <p className={`font-medium ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Pakistan</p>
               </div>
 
-              <div className={`p-6 rounded-xl shadow-lg border transform hover:scale-105 transition-all duration-300 ${isDarkMode
+              <div className={`p-6 rounded-xl shadow-lg border ${isDarkMode
                   ? 'bg-gray-700 border-gray-600'
                   : 'bg-white border-gray-100'
-                }`}>
+                } transform hover:scale-105 transition-all duration-300`}>
                 <div className="flex items-center mb-4">
                   <Briefcase className="w-5 h-5 text-blue-600 mr-2" />
-                  <span className={isDarkMode ? 'text-gray-300' : 'text-gray-600'}>Focus Areas</span>
+                  <span className={isDarkMode ? 'text-gray-300' : 'text-gray-600'}>Experience</span>
                 </div>
-                <div className="flex flex-wrap gap-2">
-                  {['Web Development', 'Full-Stack', 'Machine Learning'].map((skill) => (
-                    <span key={skill} className={`px-3 py-1 rounded-full text-sm font-medium ${isDarkMode
-                        ? 'bg-blue-900/50 text-blue-300'
-                        : 'bg-blue-100 text-blue-700'
-                      }`}>
-                      {skill}
-                    </span>
-                  ))}
+                <div className="space-y-4">
+                  {/* Experience 1 */}
+                  <div className={`p-4 rounded-lg ${isDarkMode ? 'bg-gray-600' : 'bg-gray-50'}`}>
+                    <h4 className={`font-semibold ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
+                      Web Developer
+                    </h4>
+                    <p className={`text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                      Sparkx Solutions
+                    </p>
+                    <p className={`text-xs ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>
+                      August 2025 - Sep 2025
+                    </p>
+                    <p className={`text-sm mt-2 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                      Full Web application
+                    </p>
+                  </div>
+
+                  {/* Experience 2 */}
+                  <div className={`p-4 rounded-lg ${isDarkMode ? 'bg-gray-600' : 'bg-gray-50'}`}>
+                    <h4 className={`font-semibold ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
+                      Full Stack Developer
+                    </h4>
+                    <p className={`text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                      Maaz Informatics
+                    </p>
+                    <p className={`text-xs ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>
+                      Oct 2025 - Present
+                    </p>
+                    <p className={`text-sm mt-2 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                      MERN stack development and performance optimization
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
