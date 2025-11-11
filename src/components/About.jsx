@@ -1,0 +1,83 @@
+import React from "react";
+import {Code, Mail,Phone,Github, ExternalLink,User,Briefcase,MessageCircle,ChevronDown,Menu,X,MapPin,Check,Sun,Moon} from 'lucide-react';
+export default function About({ isDarkMode }) {
+    return <section id="about" className={`py-20 relative transition-colors duration-500 ${isDarkMode ? 'bg-gray-800' : 'bg-white'
+        }`}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-16">
+            <h2 className={`text-3xl sm:text-4xl font-bold mb-4 ${isDarkMode ? 'text-white' : 'text-gray-900'
+              }`}>About Me</h2>
+            <p className={`text-lg max-w-2xl mx-auto ${isDarkMode ? 'text-gray-300' : 'text-gray-600'
+              }`}>
+              Passionate about creating innovative web solutions that make a difference
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="space-y-6">
+              <div className={`p-8 rounded-2xl transform hover:scale-105 transition-all duration-300 ${isDarkMode
+                  ? 'bg-gradient-to-r from-blue-900/50 to-purple-900/50'
+                  : 'bg-gradient-to-r from-blue-50 to-purple-50'
+                }`}>
+                <User className="w-12 h-12 text-blue-600 mb-4" />
+                <h3 className={`text-xl font-semibold mb-3 ${isDarkMode ? 'text-white' : 'text-gray-900'
+                  }`}>Web Developer</h3>
+                <p className={`leading-relaxed ${isDarkMode ? 'text-gray-300' : 'text-gray-600'
+                  }`}>
+                  I specialize in building complete web solutions, from front-end user interfaces to back-end APIs.
+                  My expertise spans across modern technologies including React.js, Node.js, and machine learning integration.
+                </p>
+              </div>
+
+              <div className={`p-8 rounded-2xl transform hover:scale-105 transition-all duration-300 ${isDarkMode
+                  ? 'bg-gradient-to-r from-emerald-900/50 to-teal-900/50'
+                  : 'bg-gradient-to-r from-emerald-50 to-teal-50'
+                }`}>
+                <Code className="w-12 h-12 text-emerald-600 mb-4" />
+                <h3 className={`text-xl font-semibold mb-3 ${isDarkMode ? 'text-white' : 'text-gray-900'
+                  }`}>Full-Stack Expertise</h3>
+                <p className={`leading-relaxed ${isDarkMode ? 'text-gray-300' : 'text-gray-600'
+                  }`}>
+                  With experience in both frontend and backend development, I create seamless digital experiences
+                  that are both visually appealing and functionally robust.
+                </p>
+              </div>
+            </div>
+
+            <div className="space-y-6">
+              <div className={`p-6 rounded-xl shadow-lg border transform hover:scale-105 transition-all duration-300 ${isDarkMode
+                  ? 'bg-gray-700 border-gray-600'
+                  : 'bg-white border-gray-100'
+                }`}>
+                <div className="flex items-center mb-4">
+                  <MapPin className="w-5 h-5 text-blue-600 mr-2" />
+                  <span className={isDarkMode ? 'text-gray-300' : 'text-gray-600'}>Location</span>
+                </div>
+                <p className={`font-medium ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Pakistan</p>
+              </div>
+
+              <div className={`p-6 rounded-xl shadow-lg border transform hover:scale-105 transition-all duration-300 ${isDarkMode
+                  ? 'bg-gray-700 border-gray-600'
+                  : 'bg-white border-gray-100'
+                }`}>
+                <div className="flex items-center mb-4">
+                  <Briefcase className="w-5 h-5 text-blue-600 mr-2" />
+                  <span className={isDarkMode ? 'text-gray-300' : 'text-gray-600'}>Focus Areas</span>
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  {['Web Development', 'Full-Stack', 'Machine Learning'].map((skill) => (
+                    <span key={skill} className={`px-3 py-1 rounded-full text-sm font-medium ${isDarkMode
+                        ? 'bg-blue-900/50 text-blue-300'
+                        : 'bg-blue-100 text-blue-700'
+                      }`}>
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+}
