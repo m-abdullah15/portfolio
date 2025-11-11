@@ -7,6 +7,7 @@ import Skills from './components/Skills';
 import Footer from './components/Footer';
 import FloatingParticles from './components/FloatingParticles';
 import CursorFollower from './components/CursorFollower';
+import Contact from './components/Contact';
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
@@ -134,7 +135,7 @@ function App() {
       {/* Skills Section */}
        <Skills isDarkMode={isDarkMode} skills={skills} />
       {/* Contact Section */}
-      
+      <Contact isDarkMode={isDarkMode}/>
       {/* Footer */}
       <Footer isDarkMode={isDarkMode} />
     </div>
